@@ -123,8 +123,7 @@ class ReviewViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         title_id = self.kwargs.get("title_id")
-        new_queryset = Review.objects.filter(title=title_id)
-        return new_queryset
+        return Review.objects.filter(title=title_id)
 
     def perform_create(self, serializer):
         title = get_object_or_404(Title, pk=self.kwargs.get('title_id'))
