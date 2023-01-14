@@ -71,7 +71,6 @@ jobs:
         envkey_DB_HOST: ${{ secrets.DB_HOST }}
         envkey_DB_PORT: ${{ secrets.DB_PORT }}
         some_other_variable: foobar
-        directory: env/
         file_name: .env
         fail_on_empty: false
         script: |
